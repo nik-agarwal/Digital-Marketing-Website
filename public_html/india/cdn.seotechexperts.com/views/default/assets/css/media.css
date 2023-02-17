@@ -1,0 +1,27 @@
+/* Contact page */
+@media(max-width:1345px){
+    #contactUS{
+        width: 150% !important;
+    }
+}
+
+@media(max-width:1135px){
+    #contactDiv{
+        display: none;
+    }
+    #contact_form{
+        margin: auto !important;
+    }
+}
+
+@media(min-width:1014px){
+    .wave3{
+        width: 100%;
+    }
+}
+
+@media(max-width:836px){
+    .col-12{
+        flex-wrap: wrap;
+    }
+}
