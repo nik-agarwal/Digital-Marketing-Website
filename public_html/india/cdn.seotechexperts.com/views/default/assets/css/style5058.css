@@ -2579,3 +2579,47 @@ div.single-blog {
     color: #000 !important;
     font-weight: bold !important;
   }
+
+  .row1{
+    display: flex;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    justify-content: space-around ;
+    margin: 0 0 0 100px;
+    height: 85%;
+}
+
+.caps{
+    color: #fff;
+    font-size: 48px;
+    font-weight: 700;
+    text-transform: capitalize;
+    /* margin-bottom: 20px; */
+    /* padding-bottom: 20px; */
+    line-height: 55px;
+    position: relative;
+}
+
+
+.colu2{
+    flex-basis: 44%;
+    min-width: 300px;
+}
+
+.colu2 img{
+    max-width: 100%;
+
+}
+
+.colu1{
+    width: 50%;
+}
+
+.text-type{
+    font-size: x-large !important;
+    font-weight: 700 !important;
+}
+
+#contactUS{
+    width: 200% !important;
+}

@@ -48,6 +48,7 @@
         as="style" onload='this.rel="stylesheet"'>
     <link rel="stylesheet preload" href="../cdn.seotechexperts.com/views/default/assets/css/style5058.css?." as="style"
         onload='this.rel="stylesheet"'>
+        <link rel="stylesheet preload" href="../cdn.seotechexperts.com/views/default/assets/css/media.css">
     <style>
         .servicelogo {
             padding-top: 10px
@@ -838,34 +839,20 @@
         <div class="slide-main">
             <!-- Single Slider -->
             <div class="single-slider" style="background-image: linear-gradient(90deg,#0d4d74,#6d0f5d)">
-                <div class="container" style="display: flex;">
-                   
-                    <div class="row" style="width: 131rem; margin-right: -12rem;" >
-                        <div class="col-md-8 col-sm-12 col-12">
-                            <!-- Slider Text -->
-                            <div class="slide-text left">
-                                <div class="slider-inner">
-                                    <h1>Are You Looking for Digital Marketing Solutions? </h1>
-                                    <h1 class="h1">We Are The Best Digital Marketing Company In India </h1>
+                <div class="row1">
+                <div class="colu1">
+                    <h1><br> <span class="txt-type" data-wait="1000" data-Words='["Are You Looking for Digital Marketing Solutions?"]'></span></h1>
+                    <h1 class="caps">We Are The Best Digital Marketing Company In India</h1>
+                    <h6 style="font-weight: 700 m !important;">Digital marketing Experts can help you gaining recognition in just a click Are you ready?</h6>
 
-                                    <p>Digital marketing Experts can help you gaining recognition in just a click Are
-                                        you ready?</p>
-                                    <div class="text-md-left py-2">
-                                        <a href="https://wa.me/+919891676518"
+                        <a href="https://wa.me/+919891676518"
                                             class="btn btn-sm font-weight-bold text-uppercase btn-outline-light rounded-0 px-5 py-3">Connect
                                             on <span class="whover" style="color: #49c95a !important;">Whatsapp</span></a>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                            <!--/ End Slider Text -->
-                        </div>
-                    </div>
-                    <div class="container">
-                    <img src="../cdn.seotechexperts.com/images/popupformimages/seo.png" alt="seoimage" style="width: 40rem; margin-top: -2rem; position: absolute;">
-                   </div>
-                   
                 </div>
+                <div class="colu2">
+                    <img src="../cdn.seotechexperts.com/images/popupformimages/seo.png" alt="">
+                </div>
+            </div>
                 <div class="custom-shape-divider-bottom-1676373743">
                     <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
           <defs>
@@ -1558,3 +1545,74 @@
                     let observer = new IntersectionObserver(onIntersection, interactSettings);
                     images.forEach(image => observer.observe(image))
     </script>
+
+    <script>
+    
+
+    class TypeWriter {
+constructor(txtElement, words, wait = 1000) {
+  this.txtElement = txtElement;
+  this.words = words;
+  this.txt = '';
+  this.wordIndex = 0;
+  this.wait = parseInt(wait, 10);
+  this.type();
+  this.isDeleting = false;
+}
+
+type() {
+  // Current index of word
+  const current = this.wordIndex % this.words.length;
+  // Get full text of current word
+  const fullTxt = this.words[current];
+
+  // Check if deleting
+  if(this.isDeleting) {
+    // Remove char
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    // Add char
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
+
+  // Insert txt into element
+  this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
+
+  // Initial Type Speed
+  let typeSpeed = 100;
+
+  if(this.isDeleting) {
+    typeSpeed /= 2;
+  }
+
+  // If word is complete
+  if(!this.isDeleting && this.txt === fullTxt) {
+    // Make pause at end
+    typeSpeed = this.wait;
+    // Set delete to true
+    this.isDeleting = true;
+  } else if(this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    // Move to next word
+    this.wordIndex++;
+    // Pause before start typing
+    typeSpeed = 500;
+  }
+
+  setTimeout(() => this.type(), typeSpeed);
+}
+}
+
+
+// Init On DOM Load
+document.addEventListener('DOMContentLoaded', init);
+
+// Init App
+function init() {
+const txtElement = document.querySelector('.txt-type');
+const words = JSON.parse(txtElement.getAttribute('data-words'));
+const wait = txtElement.getAttribute('data-wait');
+// Init TypeWriter
+new TypeWriter(txtElement, words, wait);
+}
+</script>
