@@ -414,6 +414,50 @@ ul {
     font-weight: 700
 }
 
+/* about breadcrumb */
+
+#breadcrumbs2 {
+    text-align: left;
+    padding: 50px 0 0 0;
+    position: relative;
+    background: linear-gradient(90deg,#0d4d74,#6d0f5d);
+    background-position: 50%;
+    background-size: cover
+}
+
+
+
+#breadcrumbs2 .h2,
+#breadcrumbs2 h2 {
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-weight: 500
+}
+
+#breadcrumbs2 ul {
+    padding-left: 0
+}
+
+#breadcrumbs2 ul li {
+    display: inline-block
+}
+
+#breadcrumbs2 ul li a {
+    color: #fff;
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 400
+}
+
+#breadcrumbs2 li+li::before {
+    color: #0077c0;
+    content: "+";
+    padding: 0 5px;
+    font-weight: 700
+}
+/* About breadcrumb ends */
+
 #newslatter {
     padding: 70px 0;
     background: url(images/newslatter-bg.html);
@@ -2622,4 +2666,39 @@ div.single-blog {
 
 #contactUS{
     width: 200% !important;
+}
+
+#expert{
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.nol-ogy img{
+    margin-bottom: 62px;
+    width: 40%;
+    margin-left: -3px;
+}
+
+/* Typewriter */
+.line-1{
+    /* position: relative; */
+    top: 50%;  
+    width: 25em;
+    /* margin: 0 auto; */
+    /* border-right: 2px solid rgba(255,255,255,.75); */
+    font-size: 180%;
+    /* text-align: center; */
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-40%);    
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 25em;}
 }

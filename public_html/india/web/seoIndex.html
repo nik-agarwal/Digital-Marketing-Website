@@ -760,7 +760,8 @@
             <div class="single-slider" style="background-image: linear-gradient(90deg,#0d4d74,#6d0f5d)">
                 <div class="row1">
                 <div class="colu1">
-                    <h1><br> <span class="txt-type" data-wait="1000" data-Words='["Are You Looking for Digital Marketing Solutions?"]'></span></h1>
+                    <br>
+                     <h1 class="line-1 anim-typewriter">Are You Looking for Digital Marketing Solutions?</h1>
                     <h1 class="caps">We Are The Best Digital Marketing Company In India</h1>
                     <h6 style="font-weight: 700 m !important;">Digital marketing Experts can help you gaining recognition in just a click Are you ready?</h6>
 
@@ -805,7 +806,7 @@
     </div>
 
     <div class="building">
-        <div class="container-fluid py-4">
+        <div class="container-fluid py-4" id="expert">
             <div class="row">
                 <div class="col-12 col-lg-4 seo-tech">
                     <picture>
@@ -819,7 +820,7 @@
                             title="360 Result Driven Digital Performance Marketing Agency" loading="lazy">
                     </picture>
                     <div class="Tech-nology nol-ogy">
-                        <img style="margin-bottom: 95px; width: 50%;" class="nology"
+                        <img  class="nology"
                             src="../cdn.seotechexperts.com/images/popupformimages/ASD SQUAD logo8.png"
                             alt="result oriented Digital Performance Marketing agency"
                             title="360 Result Driven Digital Performance Marketing Agency" loading="lazy">
@@ -1015,7 +1016,7 @@
 
 
     <section class="section-contact bg-light pt-5" >
-        <div class="container" >
+        <div class="container getCont" >
             <h3 class="h1 text-uppercase font-weight-bold text-center">Get in <span class="getInTouch">Touch</span>
             </h3>
             <div class="line mb-5"></div>
@@ -1075,7 +1076,7 @@
 
             </div>
             <div class="container" >
-                <div class="col-12 col-sm-12 col-lg-12 pb-4 pl-lg-5" style="display: flex;">
+                <div class="col-12 col-sm-12 col-lg-12 pb-4 pl-lg-5 contDetails" style="display: flex;">
                     <div class="container getintouchpart">
                     <i class="fa fa-map-marker mr-2 fa-2x text-primary"></i>
                     <p class="h4 py-3 border-top mb-0 d-flex align-items-center" style="border: none !important ;">
@@ -1544,73 +1545,4 @@
                     images.forEach(image => observer.observe(image))
     </script>
 
-    <script>
     
-
-    class TypeWriter {
-constructor(txtElement, words, wait = 1000) {
-  this.txtElement = txtElement;
-  this.words = words;
-  this.txt = '';
-  this.wordIndex = 0;
-  this.wait = parseInt(wait, 10);
-  this.type();
-  this.isDeleting = false;
-}
-
-type() {
-  // Current index of word
-  const current = this.wordIndex % this.words.length;
-  // Get full text of current word
-  const fullTxt = this.words[current];
-
-  // Check if deleting
-  if(this.isDeleting) {
-    // Remove char
-    this.txt = fullTxt.substring(0, this.txt.length - 1);
-  } else {
-    // Add char
-    this.txt = fullTxt.substring(0, this.txt.length + 1);
-  }
-
-  // Insert txt into element
-  this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
-
-  // Initial Type Speed
-  let typeSpeed = 100;
-
-  if(this.isDeleting) {
-    typeSpeed /= 2;
-  }
-
-  // If word is complete
-  if(!this.isDeleting && this.txt === fullTxt) {
-    // Make pause at end
-    typeSpeed = this.wait;
-    // Set delete to true
-    this.isDeleting = true;
-  } else if(this.isDeleting && this.txt === '') {
-    this.isDeleting = false;
-    // Move to next word
-    this.wordIndex++;
-    // Pause before start typing
-    typeSpeed = 500;
-  }
-
-  setTimeout(() => this.type(), typeSpeed);
-}
-}
-
-
-// Init On DOM Load
-document.addEventListener('DOMContentLoaded', init);
-
-// Init App
-function init() {
-const txtElement = document.querySelector('.txt-type');
-const words = JSON.parse(txtElement.getAttribute('data-words'));
-const wait = txtElement.getAttribute('data-wait');
-// Init TypeWriter
-new TypeWriter(txtElement, words, wait);
-}
-</script>
