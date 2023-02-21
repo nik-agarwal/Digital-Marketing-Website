@@ -39,7 +39,7 @@
 		onload='this.rel="stylesheet"'>
 		<link rel="stylesheet preload" href="../../cdn.seotechexperts.com/views/default/assets/css/services.css" as="style"
 		onload='this.rel="stylesheet"'>
-		<link rel="stylesheet" href="../cdn.seotechexperts.com/views/default/assets/css/media.css">
+	<link rel="stylesheet" href="../../cdn.seotechexperts.com/views/default/assets/css/media.css">
 	<style>
 		.servicelogo {
 			padding-top: 10px
@@ -302,6 +302,13 @@
 		}
 	</style>
 	<style>
+		.blogheading {
+			background: #f9f9f9;
+			border-left: 10px solid #9f398f;
+			padding: 10px
+		}
+	</style>
+	<style>
         .getInTouch{
             background: linear-gradient(90deg,#0d4d74,#6d0f5d);
             -webkit-text-fill-color: transparent;
@@ -316,13 +323,6 @@
             flex-direction: column;
         }
     </style>    
-	<style>
-		.blogheading {
-			background: #f9f9f9;
-			border-left: 10px solid #9f398f;
-			padding: 10px
-		}
-	</style>
 	<style>
 		@media screen and (max-width:425px) {
 			.Tech-nology img {
@@ -844,8 +844,8 @@
                 </div>
 
             </div>
-            <div class="container" >
-                <div id="c12" class="col-12 col-sm-12 col-lg-12 pb-4 pl-lg-5 contDetails" style="display: flex;">
+			<div class="container" >
+                <div class="col-12 col-sm-12 col-lg-12 pb-4 pl-lg-5 contDetails" style="display: flex;">
                     <div class="container getintouchpart">
                     <i class="fa fa-map-marker mr-2 fa-2x text-primary"></i>
                     <p class="h4 py-3 border-top mb-0 d-flex align-items-center" style="border: none !important ;">
@@ -1132,7 +1132,7 @@
 		let images = [...document.querySelectorAll('.lazy-image')]
 		const interactSettings = { root: document.querySelector('.center'), rootMargin: '0px 0px 200px 0px' }
 		function onIntersection(imageEntites) { imageEntites.forEach(image => { if (image.isIntersecting) { observer.unobserve(image.target)      
-			image.target.src = image.target.dataset.src      
-			image.target.onload = () => image.target.classList.add('loaded') } }) } let observer = new IntersectionObserver(onIntersection, interactSettings)
-			images.forEach(image => observer.observe(image))
+			image.target.src = image.target.dataset.src     
+			 image.target.onload = () => image.target.classList.add('loaded') } }) } let observer = new IntersectionObserver(onIntersection, interactSettings)
+			 images.forEach(image => observer.observe(image))
 	</script>

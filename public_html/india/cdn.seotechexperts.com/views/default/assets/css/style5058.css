@@ -2690,7 +2690,8 @@ div.single-blog {
     /* text-align: center; */
     white-space: nowrap;
     overflow: hidden;
-    transform: translateY(-40%);    
+    transform: translateY(-40%); 
+    margin: 0;   
 }
 
 /* Animation */
@@ -2702,3 +2703,4 @@ div.single-blog {
   from{width: 0;}
   to{width: 25em;}
 }
+

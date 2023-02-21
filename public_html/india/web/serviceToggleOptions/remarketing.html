@@ -39,7 +39,7 @@
 		onload='this.rel="stylesheet"'>
 		<link rel="stylesheet preload" href="../../cdn.seotechexperts.com/views/default/assets/css/services.css" as="style"
 		onload='this.rel="stylesheet"'>
-		<link rel="stylesheet" href="../../cdn.seotechexperts.com/views/default/assets/css/media.css">
+	<link rel="stylesheet" href="../../cdn.seotechexperts.com/views/default/assets/css/media.css">
 	<style>
 		.servicelogo {
 			padding-top: 10px
@@ -785,7 +785,7 @@
 
 	
 	<section class="section-contact bg-light pt-5" >
-        <div class="containergetCont" >
+        <div class="container getCont" >
             <h3 class="h1 text-uppercase font-weight-bold text-center">Get in <span class="getInTouch">Touch</span>
             </h3>
             <div class="line mb-5"></div>
@@ -844,7 +844,7 @@
                 </div>
 
             </div>
-            <div class="container" >
+			<div class="container" >
                 <div class="col-12 col-sm-12 col-lg-12 pb-4 pl-lg-5 contDetails" style="display: flex;">
                     <div class="container getintouchpart">
                     <i class="fa fa-map-marker mr-2 fa-2x text-primary"></i>
@@ -1129,5 +1129,10 @@
 			});
 	</script>
 	<script>
-		let images = [...document.querySelectorAll('.lazy-image')]const interactSettings = { root: document.querySelector('.center'), rootMargin: '0px 0px 200px 0px' }function onIntersection(imageEntites) { imageEntites.forEach(image => { if (image.isIntersecting) { observer.unobserve(image.target)      image.target.src = image.target.dataset.src      image.target.onload = () => image.target.classList.add('loaded') } }) } let observer = new IntersectionObserver(onIntersection, interactSettings)images.forEach(image => observer.observe(image))
+		let images = [...document.querySelectorAll('.lazy-image')]
+		const interactSettings = { root: document.querySelector('.center'), rootMargin: '0px 0px 200px 0px' }
+		function onIntersection(imageEntites) { imageEntites.forEach(image => { if (image.isIntersecting) { observer.unobserve(image.target)      
+			image.target.src = image.target.dataset.src     
+			 image.target.onload = () => image.target.classList.add('loaded') } }) } let observer = new IntersectionObserver(onIntersection, interactSettings)
+			 images.forEach(image => observer.observe(image))
 	</script>
